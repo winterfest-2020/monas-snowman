@@ -1,0 +1,18 @@
+name: 3. So much snow! ❄️
+
+on:
+  label:
+    types: created
+
+jobs:
+  snowfall:
+    name: Stop snowing
+
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Proceed to chapter 3 ("So much snow!")
+        run: ./.github/scripts/update-repo.sh snow

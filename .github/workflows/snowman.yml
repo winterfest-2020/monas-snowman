@@ -1,0 +1,18 @@
+name: 4. Let's build a snowman ☃
+
+on:
+  watch:
+    types: started
+
+jobs:
+  snowfall:
+    name: Build snowman
+
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Proceed to chapter 4 ("Let's build a snowman")
+        run: ./.github/scripts/update-repo.sh snowman

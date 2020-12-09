@@ -1,0 +1,17 @@
+name: 1. It's summer ☀
+
+on:
+  workflow_dispatch:
+
+jobs:
+  reset-demo:
+    name: Begin story
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Start chapter 1 ("It's summer")
+        run: ./.github/scripts/update-repo.sh summer
